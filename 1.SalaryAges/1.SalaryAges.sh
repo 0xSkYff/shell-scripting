@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 ################################################################################################
 #Author:0xSkyff
 #Description:
@@ -8,4 +9,28 @@
 #	salary will be of 15000€, between 30 and 39 of 20000€, from 40 to 49 then
 #	30000€, in other case it will say that he is already retired.
 #################################################################################################
-	
+
+echo 'How old are you?  '
+read AGE
+#TODO: Add validation. Only allow numbers.
+if [ $AGE -lt 18 ];then
+	echo 'You are too young to be working here!!'
+	exit 1
+fi	
+case $AGE in 
+	1[8,9])
+		echo "Your salary will be of 12000€ "
+		;;
+	2[0-9])
+		echo "Your salary will be of 15000€ "
+		;;
+	3[0-9])
+		echo "Your salary will be of 20000€ "
+		;;
+	4[0-9])
+		echo "Your salary will be of 30000€"
+		;;	
+	*)
+		echo "You are already retired we won't pay you more!"
+		;;
+esac
