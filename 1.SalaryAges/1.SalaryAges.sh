@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 ################################################################################################
-#Author:0xSkyff
+#Author:0xSkYff
 #Description:
 #	The script requests the age of the person and if the person has
 #	less than 18 years old, a message is displayed explaining that he is young
@@ -13,11 +13,11 @@
 echo 'How old are you?  '
 read AGE
 #TODO: Add validation. Only allow numbers.
-if [ $AGE -lt 18 ];then
-	echo 'You are too young to be working here!!'
-	exit 1
-fi	
 case $AGE in 
+	[0-9]) echo "Where's your daddy, kid? You are too young to be working here!!"
+		;;		
+	1[0-7]) echo "Where's your daddy, kid? You are too young to be working here!!"
+		;;		
 	1[8,9])
 		echo "Your salary will be of 12000€ "
 		;;
