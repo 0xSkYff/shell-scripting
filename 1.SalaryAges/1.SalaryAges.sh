@@ -12,7 +12,7 @@
 
 echo 'How old are you?  '
 read AGE
-#TODO: Add validation. Only allow numbers.
+if [[ $AGE =~ ^[0-9]+$ ]]; then
 case $AGE in 
 	[0-9]) echo "Where's your daddy, kid? You are too young to be working here!!"
 		;;		
@@ -34,3 +34,5 @@ case $AGE in
 		echo "You are already retired we won't pay you more!"
 		;;
 esac
+else echo "The age must be a digit. Try again."; exit 1
+fi
