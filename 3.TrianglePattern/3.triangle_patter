@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+################################################################################################
+#Author:0xSkYff
+#Description: The script asks for the height of a triangle, and draws it aligned to the left with *
+#################################################################################################
+
+#The symbol can be modified
+SYMBOL="*"
+
+printf "Height of the triangle\n"
+read HEIGHT
+for ITERATOR in `seq $HEIGHT`
+do
+	head -c $ITERATOR /dev/zero | tr '\0' "$SYMBOL"
+	printf "\n"
+done
+	
