@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+################################################################################################
+#Author:0xSkYff
+#Description: The script asks for a year and tells you if it is a leap year 
+#################################################################################################
+
+echo "Which year"
+read YEAR
+
+if [[ $(($YEAR % 4)) -eq 0 ]]; then
+	if [[ $(($YEAR % 100)) -eq 0 ]]; then
+		if [[ $(($YEAR % 400)) -eq 0 ]]; then
+			echo "The year is a leap year"
+		else echo "The year is not a leap year"
+		fi
+	else echo "The year is a leap year"
+	fi
+	
+else
+	echo "The year is not a leap year"
+fi
